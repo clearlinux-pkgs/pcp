@@ -1,0 +1,95 @@
+--- pcp-3.12.1/GNUmakefile~	2017-08-16 03:55:58.000000000 +0000
++++ pcp-3.12.1/GNUmakefile	2017-10-05 22:57:49.484869680 +0000
+@@ -60,23 +60,23 @@
+ 
+ install_pcp :  default_pcp
+ 	# install the common directories _once_
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_SHARE_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SHARE_DIR)
+ ifneq "$(findstring $(TARGET_OS),darwin mingw)" ""
+-	$(INSTALL) -m 755 -d $(PCP_RC_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_SASLCONF_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_BIN_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_LIB_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 755 -d $(PCP_MAN_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_MAN_DIR)/man1
+-	$(INSTALL) -m 755 -d $(PCP_MAN_DIR)/man3
+-	$(INSTALL) -m 755 -d $(PCP_MAN_DIR)/man5
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_RC_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SASLCONF_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_BIN_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_LIB_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_LIB_DIR)/pkgconfig
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_MAN_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_MAN_DIR)/man1
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_MAN_DIR)/man3
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_MAN_DIR)/man5
+ endif
+ ifneq "$(findstring $(TARGET_OS), mingw)" ""
+-	$(INSTALL) -m 1777 -d $(PCP_TMPFILE_DIR)
++	$(INSTALL) -m 1777 -d $(DESTDIR)$(PCP_TMPFILE_DIR)
+ endif
+-	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(PCP_TMP_DIR)
++	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(DESTDIR)$(PCP_TMP_DIR)
+ ifeq "$(findstring $(PACKAGE_DISTRIBUTION), debian)" ""
+ 	# $PCP_RUN_DIR usually -> /var/run which may be a temporary filesystem
+ 	# and Debian's lintian complains about packages including /var/run/xxx
+@@ -86,23 +86,23 @@
+ 	#
+-	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(PCP_RUN_DIR)
++	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(DESTDIR)$(PCP_RUN_DIR)
+ endif
+-	$(INSTALL) -m 755 -d $(PCP_SYSCONFIG_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_SYSCONF_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_BINADM_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_SHARE_DIR)/lib
+-	$(INSTALL) -m 755 -d $(PCP_SHARE_DIR)/examples
+-	$(INSTALL) -m 755 -d $(PCP_INC_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)/config
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)/config/pmchart
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)/config/pmieconf
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)/config/pmlogconf
+-	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(PCP_VAR_DIR)/config/pmda
+-	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(PCP_LOG_DIR)
+-	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(PCP_NSSDB_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_VAR_DIR)/pmns
+-	$(INSTALL) -m 755 -d $(PCP_PMDAS_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_DOC_DIR)
+-	$(INSTALL) -m 755 -d $(PCP_DEMOS_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SYSCONFIG_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SYSCONF_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_BINADM_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SHARE_DIR)/lib
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_SHARE_DIR)/examples
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_INC_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)/config
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)/config/pmchart
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)/config/pmieconf
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)/config/pmlogconf
++	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(DESTDIR)$(PCP_VAR_DIR)/config/pmda
++	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(DESTDIR)$(PCP_LOG_DIR)
++	$(INSTALL) -m 775 -o $(PCP_USER) -g $(PCP_GROUP) -d $(DESTDIR)$(PCP_NSSDB_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_VAR_DIR)/pmns
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_PMDAS_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_DOC_DIR)
++	$(INSTALL) -m 755 -d $(DESTDIR)$(PCP_DEMOS_DIR)
+ 	#
+ 	@for d in `echo $(SUBDIRS)`; do \
+ 	    if test -d "$$d" ; then \
+@@ -111,10 +111,10 @@
+ 	    fi; \
+ 	done
+ ifneq "$(PACKAGE_DISTRIBUTION)" "debian"
+-	$(INSTALL) -m 644 $(LICFILES) $(PCP_DOC_DIR)/$(LICFILES)
++	$(INSTALL) -m 644 $(LICFILES) $(DESTDIR)$(PCP_DOC_DIR)/$(LICFILES)
+ endif
+-	$(INSTALL) -m 644 pcp.lsm $(DOCFILES) $(PCP_DOC_DIR)
+-	$(INSTALL) -m 755 install-sh $(PCP_BINADM_DIR)/install-sh
++	$(INSTALL) -m 644 pcp.lsm $(DOCFILES) $(DESTDIR)$(PCP_DOC_DIR)
++	$(INSTALL) -m 755 install-sh $(DESTDIR)$(PCP_BINADM_DIR)/install-sh
+ 
+ ifdef BUILDRULES
+ include $(BUILDRULES)

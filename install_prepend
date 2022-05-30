@@ -1,0 +1,1 @@
+export DIST_ROOT=$RPM_BUILD_ROOT
