@@ -9,7 +9,7 @@ URL      : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar
 Source0  : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Summary  : System-level performance monitoring and performance management
 Group    : Development/Tools
-License  : Apache-2.0 BSD-3-Clause CC-BY GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+ MIT
+License  : Apache-2.0 BSD-3-Clause GPL-2.0 GPL-2.0+ LGPL-2.1 LGPL-2.1+ MIT
 Requires: pcp-bin = %{version}-%{release}
 Requires: pcp-data = %{version}-%{release}
 Requires: pcp-lib = %{version}-%{release}
