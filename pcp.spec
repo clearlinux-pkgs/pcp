@@ -4,7 +4,7 @@
 #
 Name     : pcp
 Version  : 5.3.7
-Release  : 2
+Release  : 3
 URL      : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Summary  : System-level performance monitoring and performance management
@@ -185,7 +185,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653875653
+export SOURCE_DATE_EPOCH=1653927399
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -195,7 +195,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1653875653
+export SOURCE_DATE_EPOCH=1653927399
 rm -rf %{buildroot}
 ## install_prepend content
 export DIST_ROOT=$RPM_BUILD_ROOT
@@ -209,6 +209,8 @@ cp %{_builddir}/pcp-5.3.7/vendor/github.com/htop-dev/htop/COPYING %{buildroot}/u
 cp %{_builddir}/pcp-5.3.7/vendor/github.com/mnunberg/jsonsl/LICENSE %{buildroot}/usr/share/package-licenses/pcp/77b27c166eb1c7fa55288331b53f9c72b067e3c8
 cp %{_builddir}/pcp-5.3.7/vendor/github.com/redis/hiredis/COPYING %{buildroot}/usr/share/package-licenses/pcp/e9c1298de98016808910005a33de3a5f25dce05e
 %make_install
+## Remove excluded files
+rm -f %{buildroot}*/usr/bin/dstat
 ## install_append content
 rm -rf %{buildroot}/var
 ## install_append end
@@ -220,7 +222,6 @@ rm -rf %{buildroot}/var
 %defattr(-,root,root,-)
 /usr/bin/collectl2pcp
 /usr/bin/dbpmda
-/usr/bin/dstat
 /usr/bin/ganglia2pcp
 /usr/bin/genpmda
 /usr/bin/iostat2pcp
