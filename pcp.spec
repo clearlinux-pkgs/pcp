@@ -4,7 +4,7 @@
 #
 Name     : pcp
 Version  : 5.3.7
-Release  : 3
+Release  : 4
 URL      : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Summary  : System-level performance monitoring and performance management
@@ -185,7 +185,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653927399
+export SOURCE_DATE_EPOCH=1654288637
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -195,7 +195,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1653927399
+export SOURCE_DATE_EPOCH=1654288637
 rm -rf %{buildroot}
 ## install_prepend content
 export DIST_ROOT=$RPM_BUILD_ROOT
@@ -1772,16 +1772,7 @@ rm -rf %{buildroot}/var
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/PCP/LogSummary.pm
-/usr/lib/perl5/vendor_perl/5.34.0/PCP/exceldemo.pl
-/usr/lib/perl5/vendor_perl/5.34.0/PCP/extract.pl
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/PCP/LogImport.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/PCP/MMV.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/PCP/PMDA.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/PCP/server.pl
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/PCP/LogImport/LogImport.so
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/PCP/MMV/MMV.so
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/PCP/PMDA/PMDA.so
+/usr/lib/perl5/*
 
 %files python
 %defattr(-,root,root,-)
