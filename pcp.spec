@@ -4,7 +4,7 @@
 #
 Name     : pcp
 Version  : 5.3.7
-Release  : 4
+Release  : 5
 URL      : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/refs/tags/5.3.7.tar.gz
 Summary  : System-level performance monitoring and performance management
