@@ -5,7 +5,7 @@
 #
 Name     : pcp
 Version  : 6.0.3
-Release  : 12
+Release  : 13
 URL      : https://github.com/performancecopilot/pcp/archive/6.0.3/pcp-6.0.3.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/6.0.3/pcp-6.0.3.tar.gz
 Summary  : System-level performance monitoring and performance management
@@ -197,7 +197,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689784521
+export SOURCE_DATE_EPOCH=1691001540
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -207,7 +207,7 @@ export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -f
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1689784521
+export SOURCE_DATE_EPOCH=1691001540
 rm -rf %{buildroot}
 ## install_prepend content
 export DIST_ROOT=$RPM_BUILD_ROOT
@@ -1693,6 +1693,7 @@ rm -rf %{buildroot}/var
 /usr/share/man/man1/pmdagfs2.1.gz
 /usr/share/man/man1/pmdagluster.1.gz
 /usr/share/man/man1/pmdagpfs.1.gz
+/usr/share/man/man1/pmdagpsd.1.gz
 /usr/share/man/man1/pmdahacluster.1.gz
 /usr/share/man/man1/pmdahaproxy.1.gz
 /usr/share/man/man1/pmdaib.1.gz
@@ -1714,9 +1715,11 @@ rm -rf %{buildroot}/var
 /usr/share/man/man1/pmdamounts.1.gz
 /usr/share/man/man1/pmdamssql.1.gz
 /usr/share/man/man1/pmdamysql.1.gz
+/usr/share/man/man1/pmdanamed.1.gz
 /usr/share/man/man1/pmdanetbsd.1.gz
 /usr/share/man/man1/pmdanetcheck.1.gz
 /usr/share/man/man1/pmdanetfilter.1.gz
+/usr/share/man/man1/pmdanews.1.gz
 /usr/share/man/man1/pmdanfsclient.1.gz
 /usr/share/man/man1/pmdanginx.1.gz
 /usr/share/man/man1/pmdanutcracker.1.gz
@@ -1725,6 +1728,7 @@ rm -rf %{buildroot}/var
 /usr/share/man/man1/pmdaopenvswitch.1.gz
 /usr/share/man/man1/pmdaoracle.1.gz
 /usr/share/man/man1/pmdaoverhead.1.gz
+/usr/share/man/man1/pmdapdns.1.gz
 /usr/share/man/man1/pmdaperfevent.1.gz
 /usr/share/man/man1/pmdapipe.1.gz
 /usr/share/man/man1/pmdapodman.1.gz
@@ -1736,12 +1740,14 @@ rm -rf %{buildroot}/var
 /usr/share/man/man1/pmdaroomtemp.1.gz
 /usr/share/man/man1/pmdaroot.1.gz
 /usr/share/man/man1/pmdarsyslog.1.gz
+/usr/share/man/man1/pmdasamba.1.gz
 /usr/share/man/man1/pmdasample.1.gz
 /usr/share/man/man1/pmdasendmail.1.gz
 /usr/share/man/man1/pmdashping.1.gz
 /usr/share/man/man1/pmdasimple.1.gz
 /usr/share/man/man1/pmdaslurm.1.gz
 /usr/share/man/man1/pmdasmart.1.gz
+/usr/share/man/man1/pmdasnmp.1.gz
 /usr/share/man/man1/pmdasockets.1.gz
 /usr/share/man/man1/pmdasolaris.1.gz
 /usr/share/man/man1/pmdasummary.1.gz
