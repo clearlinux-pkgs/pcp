@@ -4,13 +4,13 @@
 # Using build pattern: configure
 #
 Name     : pcp
-Version  : 6.0.3
-Release  : 13
-URL      : https://github.com/performancecopilot/pcp/archive/6.0.3/pcp-6.0.3.tar.gz
-Source0  : https://github.com/performancecopilot/pcp/archive/6.0.3/pcp-6.0.3.tar.gz
+Version  : 6.0.5
+Release  : 14
+URL      : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
+Source0  : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
 Summary  : System-level performance monitoring and performance management
 Group    : Development/Tools
-License  : Apache-2.0 BSD-2-Clause BSD-3-Clause GPL-2.0 GPL-2.0+ LGPL-2.0+ LGPL-2.1 MIT
+License  : Apache-2.0 BSD-2-Clause BSD-3-Clause CC-BY-3.0 GPL-2.0 GPL-2.0+ LGPL-2.0+ LGPL-2.1 LGPL-2.1+ MIT
 Requires: pcp-bin = %{version}-%{release}
 Requires: pcp-config = %{version}-%{release}
 Requires: pcp-data = %{version}-%{release}
@@ -186,8 +186,8 @@ services components for the pcp package.
 
 
 %prep
-%setup -q -n pcp-6.0.3
-cd %{_builddir}/pcp-6.0.3
+%setup -q -n pcp-6.0.5
+cd %{_builddir}/pcp-6.0.5
 
 %build
 ## build_prepend content
@@ -197,7 +197,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691001540
+export SOURCE_DATE_EPOCH=1692222124
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -207,7 +207,7 @@ export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -f
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1691001540
+export SOURCE_DATE_EPOCH=1692222124
 rm -rf %{buildroot}
 ## install_prepend content
 export DIST_ROOT=$RPM_BUILD_ROOT
@@ -277,6 +277,7 @@ rm -rf %{buildroot}/var
 /usr/bin/pmlogcheck
 /usr/bin/pmlogconf
 /usr/bin/pmlogctl
+/usr/bin/pmlogdump
 /usr/bin/pmlogextract
 /usr/bin/pmlogger
 /usr/bin/pmloglabel
@@ -510,6 +511,7 @@ rm -rf %{buildroot}/var
 /usr/share/man/man3/__pmConvertHighResTime.3.gz
 /usr/share/man/man3/__pmConvertTime.3.gz
 /usr/share/man/man3/__pmDiscoverServicesWithOptions.3.gz
+/usr/share/man/man3/__pmEquivInDom.3.gz
 /usr/share/man/man3/__pmFdLookupIPC.3.gz
 /usr/share/man/man3/__pmFreeAttrsSpec.3.gz
 /usr/share/man/man3/__pmFreeHostAttrsSpec.3.gz
@@ -555,6 +557,7 @@ rm -rf %{buildroot}/var
 /usr/share/man/man3/pmAF.3.gz
 /usr/share/man/man3/pmAddDerived.3.gz
 /usr/share/man/man3/pmAddDerivedMetric.3.gz
+/usr/share/man/man3/pmAddDerivedText.3.gz
 /usr/share/man/man3/pmAddProfile.3.gz
 /usr/share/man/man3/pmAtomStr.3.gz
 /usr/share/man/man3/pmAtomStr_r.3.gz
@@ -1073,6 +1076,7 @@ rm -rf %{buildroot}/var
 /usr/libexec/pcp/bin/pmie_dump_stats
 /usr/libexec/pcp/bin/pmie_email
 /usr/libexec/pcp/bin/pmie_farm
+/usr/libexec/pcp/bin/pmie_webhook
 /usr/libexec/pcp/bin/pmiestatus
 /usr/libexec/pcp/bin/pmlock
 /usr/libexec/pcp/bin/pmlogconf
@@ -1082,6 +1086,7 @@ rm -rf %{buildroot}/var
 /usr/libexec/pcp/bin/pmlogger_daily
 /usr/libexec/pcp/bin/pmlogger_daily_report
 /usr/libexec/pcp/bin/pmlogger_farm
+/usr/libexec/pcp/bin/pmlogger_janitor
 /usr/libexec/pcp/bin/pmlogger_merge
 /usr/libexec/pcp/bin/pmlogger_rewrite
 /usr/libexec/pcp/bin/pmlogreduce
@@ -1790,6 +1795,7 @@ rm -rf %{buildroot}/var
 /usr/share/man/man1/pmlogcheck.1.gz
 /usr/share/man/man1/pmlogconf.1.gz
 /usr/share/man/man1/pmlogctl.1.gz
+/usr/share/man/man1/pmlogdump.1.gz
 /usr/share/man/man1/pmlogextract.1.gz
 /usr/share/man/man1/pmlogger.1.gz
 /usr/share/man/man1/pmlogger_check.1.gz

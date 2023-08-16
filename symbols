@@ -30,6 +30,7 @@ libpcp.so.3:PCP_3.34
 libpcp.so.3:PCP_3.35
 libpcp.so.3:PCP_3.36
 libpcp.so.3:PCP_3.37
+libpcp.so.3:PCP_3.38
 libpcp.so.3:PCP_3.4
 libpcp.so.3:PCP_3.5
 libpcp.so.3:PCP_3.6
@@ -490,6 +491,7 @@ libpcp.so.3:__pmtimevalToReal
 libpcp.so.3:getmachineid
 libpcp.so.3:pmAddDerived
 libpcp.so.3:pmAddDerivedMetric
+libpcp.so.3:pmAddDerivedText
 libpcp.so.3:pmAddProfile
 libpcp.so.3:pmAtomStr
 libpcp.so.3:pmAtomStr_r
@@ -701,6 +703,7 @@ libpcp_fault.so.3:PCP_3.34
 libpcp_fault.so.3:PCP_3.35
 libpcp_fault.so.3:PCP_3.36
 libpcp_fault.so.3:PCP_3.37
+libpcp_fault.so.3:PCP_3.38
 libpcp_fault.so.3:PCP_3.4
 libpcp_fault.so.3:PCP_3.5
 libpcp_fault.so.3:PCP_3.6
@@ -1164,6 +1167,7 @@ libpcp_fault.so.3:__pmtimevalToReal
 libpcp_fault.so.3:getmachineid
 libpcp_fault.so.3:pmAddDerived
 libpcp_fault.so.3:pmAddDerivedMetric
+libpcp_fault.so.3:pmAddDerivedText
 libpcp_fault.so.3:pmAddProfile
 libpcp_fault.so.3:pmAtomStr
 libpcp_fault.so.3:pmAtomStr_r
