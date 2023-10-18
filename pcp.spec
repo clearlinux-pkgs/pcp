@@ -7,7 +7,7 @@
 #
 Name     : pcp
 Version  : 6.0.5
-Release  : 15
+Release  : 16
 URL      : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
 Summary  : System-level performance monitoring and performance management
@@ -54,6 +54,7 @@ BuildRequires : readline-dev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
+Patch1: pcfix.patch
 
 %description
 Performance Co-Pilot (PCP) provides a framework and services to support
@@ -190,6 +191,7 @@ services components for the pcp package.
 %prep
 %setup -q -n pcp-6.0.5
 cd %{_builddir}/pcp-6.0.5
+%patch -P 1 -p1
 
 %build
 ## build_prepend content
@@ -199,7 +201,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1697578769
+export SOURCE_DATE_EPOCH=1697672932
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -226,7 +228,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1697578769
+export SOURCE_DATE_EPOCH=1697672932
 rm -rf %{buildroot}
 ## install_prepend content
 export DIST_ROOT=$RPM_BUILD_ROOT

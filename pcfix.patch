@@ -1,0 +1,9 @@
+--- pcp-6.0.5/src/libpcp_archive/src/libpcp_archive.pc.in~	2023-06-25 01:02:27.000000000 +0000
++++ pcp-6.0.5/src/libpcp_archive/src/libpcp_archive.pc.in	2023-10-18 23:40:25.335318809 +0000
+@@ -6,5 +6,5 @@
+ Name: libpcp_arch
+ Description: The Performance Co-Pilot archive writer library
+ Version: @VERSION@
+-Libs: -L${libdir} -lpcp_arch -lpcp
++Libs: -L${libdir} -lpcp_archive -lpcp
+ Cflags: -I${includedir}
