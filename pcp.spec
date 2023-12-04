@@ -7,7 +7,7 @@
 #
 Name     : pcp
 Version  : 6.0.5
-Release  : 16
+Release  : 17
 URL      : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
 Source0  : https://github.com/performancecopilot/pcp/archive/6.0.5/pcp-6.0.5.tar.gz
 Summary  : System-level performance monitoring and performance management
