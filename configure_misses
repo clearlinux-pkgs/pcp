@@ -1,77 +1,162 @@
 Configure miss: PR_TERMCHILD constant in sys/prctl.h
+Configure miss: PR_TERMCHILD constant in sys/prctl.h
+Configure miss: Python module BPF
 Configure miss: Python module BPF
 Configure miss: Python module jsonpointer
+Configure miss: Python module jsonpointer
+Configure miss: Python module libvirt
 Configure miss: Python module libvirt
 Configure miss: Python module openpyxl
+Configure miss: Python module openpyxl
+Configure miss: Python module requests
+Configure miss: Python module requests
+Configure miss: Python module six
+Configure miss: Python module six
+Configure miss: SID 
 Configure miss: SID 
 Configure miss: __psint_t 
+Configure miss: __psint_t 
+Configure miss: altzone in time.h
 Configure miss: altzone in time.h
 Configure miss: avahi
+Configure miss: avahi
+Configure miss: avahi-client/publish.h
 Configure miss: avahi-client/publish.h
 Configure miss: avahi-common/alternative.h
+Configure miss: avahi-common/alternative.h
+Configure miss: backtrace in -lexecinfo
 Configure miss: backtrace in -lexecinfo
 Configure miss: chan_init in -lchan
+Configure miss: chan_init in -lchan
+Configure miss: dpkg
 Configure miss: dpkg
 Configure miss: dtrace
+Configure miss: dtrace
+Configure miss: flog10
 Configure miss: flog10
 Configure miss: flog10 in -lm
+Configure miss: flog10 in -lm
+Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: getmachineid
+Configure miss: getmachineid
+Configure miss: hdiutil
 Configure miss: hdiutil
 Configure miss: hdr_init in -lhdr_histogram
+Configure miss: hdr_init in -lhdr_histogram
+Configure miss: if bit fields allocated left-to-right
 Configure miss: if bit fields allocated left-to-right
 Configure miss: if selinux policy should be included
+Configure miss: if selinux policy should be included
 Configure miss: if the LIO PMDA should be included
+Configure miss: if the LIO PMDA should be included
+Configure miss: if the OpenMetrics PMDA should be included
+Configure miss: if the OpenMetrics PMDA should be included
+Configure miss: if the SNMP PMDA should be included
 Configure miss: if the SNMP PMDA should be included
 Configure miss: if the activemq PMDA should be included
+Configure miss: if the activemq PMDA should be included
+Configure miss: if the bcc PMDA should be included
 Configure miss: if the bcc PMDA should be included
 Configure miss: if the bind2 PMDA should be included
+Configure miss: if the bind2 PMDA should be included
+Configure miss: if the bpftrace PMDA should be included
 Configure miss: if the bpftrace PMDA should be included
 Configure miss: if the infiniband PMDA should be included
+Configure miss: if the infiniband PMDA should be included
+Configure miss: if the json PMDA should be included
 Configure miss: if the json PMDA should be included
 Configure miss: if the libvirt PMDA should be included
+Configure miss: if the libvirt PMDA should be included
+Configure miss: if the mongodb PMDA should be included
 Configure miss: if the mongodb PMDA should be included
 Configure miss: if the mysql PMDA should be included
+Configure miss: if the mysql PMDA should be included
+Configure miss: if the nginx PMDA should be included
 Configure miss: if the nginx PMDA should be included
 Configure miss: if the nutcracker PMDA should be included
+Configure miss: if the nutcracker PMDA should be included
+Configure miss: if the oracle PMDA should be included
 Configure miss: if the oracle PMDA should be included
 Configure miss: if the perfevent PMDA should be included
+Configure miss: if the perfevent PMDA should be included
+Configure miss: if the postfix PMDA should be included
 Configure miss: if the postfix PMDA should be included
 Configure miss: if the postgresql PMDA should be included
+Configure miss: if the postgresql PMDA should be included
+Configure miss: if the python InfluxDB support should be included
+Configure miss: if the python InfluxDB support should be included
+Configure miss: if the statsd PMDA should be included
 Configure miss: if the statsd PMDA should be included
 Configure miss: infiniband/umad.h
+Configure miss: infiniband/umad.h
+Configure miss: iphlpapi.h
 Configure miss: iphlpapi.h
 Configure miss: iptypes.h
+Configure miss: iptypes.h
+Configure miss: library containing yywrap
 Configure miss: library containing yywrap
 Configure miss: libzfs.h
+Configure miss: libzfs.h
+Configure miss: llvm-strip
 Configure miss: llvm-strip
 Configure miss: machine/endian.h 
+Configure miss: machine/endian.h 
+Configure miss: madrpc_init in -libmad
 Configure miss: madrpc_init in -libmad
 Configure miss: makepkg
+Configure miss: makepkg
+Configure miss: mkinstallp
 Configure miss: mkinstallp
 Configure miss: ncurses/curses.h
+Configure miss: ncurses/curses.h
+Configure miss: ncurses/ncurses.h
 Configure miss: ncurses/ncurses.h
 Configure miss: ncursesw/curses.h
+Configure miss: ncursesw/curses.h
+Configure miss: netioapi.h
 Configure miss: netioapi.h
 Configure miss: perfmon/pfmlib_perf_event.h
+Configure miss: perfmon/pfmlib_perf_event.h
+Configure miss: pfm_get_os_event_encoding in -lpfm
 Configure miss: pfm_get_os_event_encoding in -lpfm
 Configure miss: pkgmk
+Configure miss: pkgmk
+Configure miss: pylint
 Configure miss: pylint
 Configure miss: python2
+Configure miss: python2
+Configure miss: python2.7
 Configure miss: python2.7
 Configure miss: qshape
+Configure miss: qshape
+Configure miss: qtchooser
 Configure miss: qtchooser
 Configure miss: ragel
+Configure miss: ragel
+Configure miss: readline
 Configure miss: readline
 Configure miss: regcmp
+Configure miss: regcmp
+Configure miss: regcomp in -lregex
 Configure miss: regcomp in -lregex
 Configure miss: regex
+Configure miss: regex
+Configure miss: standards.h
 Configure miss: standards.h
 Configure miss: sys/byteorder.h
+Configure miss: sys/byteorder.h
+Configure miss: sys/endian.h 
 Configure miss: sys/endian.h 
 Configure miss: sys/endian.h (IRIX variant) 
+Configure miss: sys/endian.h (IRIX variant) 
+Configure miss: sys/sdt.h
 Configure miss: sys/sdt.h
 Configure miss: trace_back_stack
+Configure miss: trace_back_stack
+Configure miss: uint_t
 Configure miss: uint_t
 Configure miss: umad_init in -libumad
+Configure miss: umad_init in -libumad
+Configure miss: ws2tcpip.h
 Configure miss: ws2tcpip.h
