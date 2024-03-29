@@ -3,4 +3,5 @@ inkscape
 ncurses-dev
 pypi(pylint)
 python3-dev
+qtbase-dev
 readline-dev

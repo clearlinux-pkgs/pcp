@@ -3,3 +3,4 @@
 avahi-client
 libmicrohttpd
 libsystemd-journal
+liblzma
